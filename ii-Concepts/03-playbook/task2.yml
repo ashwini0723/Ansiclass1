@@ -10,19 +10,10 @@
   vars: 
 
   # Task: the list of tasks that will be executed within the playbook
-  tasks1:
+  tasks:
    - name: install winzip
      win_chocolatey:
-      name: 7-Zip
-
-  tasks2:
-    - name: copy the files from this to remote
-      win_copy:
-       src: test.txt
-       dest: C:/temp.txt    
-       
-
-
+      name: 7Zip
   # Handlers: handlers that are executed as a notify key from a task
 
   # Roles: list of roles to be imported into the play
