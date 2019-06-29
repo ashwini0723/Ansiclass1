@@ -10,10 +10,16 @@
   vars: 
 
   # Task: the list of tasks that will be executed within the playbook
-  tasks:
-    - name: install winzip
-      win_chocolatey:
-       name: 7-Zip
+  tasks1:
+   - name: install winzip
+     win_chocolatey:
+      name: 7-Zip
+
+  tasks2:
+    - name: copy the files from this to remote
+      win_copy:
+       src: test.txt
+       dest: C:/temp.txt    
        
 
 
