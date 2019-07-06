@@ -8,7 +8,7 @@
       win_service:
         name: " {{ var_files }} "
         state: stopped
-      when: state == "started"
+    #  when: state == "started"
   
   vars_files:
    - servicesvar.yml
