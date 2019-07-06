@@ -9,7 +9,7 @@
   tasks: 
     - name: Stop the services
       win_service:
-        name: " {{ vars_files }} "
+        name: " {{ Servicenames }} "
         state: stopped
 ...      
 
