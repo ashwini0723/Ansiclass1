@@ -2,19 +2,15 @@
 -
   hosts: all
   gather_facts: true # this will make not to gather facts before running tasks
+  
+  vars_files:
+   - servicesvar.yml
 
   tasks: 
     - name: Stop the services
       win_service:
-        name: " {{ var_files }} "
+        name: " {{ vars_files }} "
         state: stopped
-      when: state == started
-  
-  vars_files:
-   - servicesvar.yml
-    
-
-
 ...      
 
     
