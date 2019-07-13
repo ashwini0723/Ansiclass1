@@ -1,2 +1,5 @@
 ---
 # vars file for webserver
+features:
+  - Web-Server
+  - DNS

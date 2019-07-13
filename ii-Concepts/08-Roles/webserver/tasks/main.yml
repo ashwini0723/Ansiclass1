@@ -1,2 +1,11 @@
 ---
 # tasks file for webserver
+
+- name: Install Features
+  win_feature:
+  debug:
+    msg: " installing the features {{ item }}"
+  loop: "{{features}}"
+  state: present
+  notify: Restart a service
+  
